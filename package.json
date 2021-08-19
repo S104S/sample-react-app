@@ -1,0 +1,15 @@
+{
+  "name": "crutches",
+  "version": "0.0.1",
+  "description": "CFD Support app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.mitekcloud.local:bstenfors/crutches"
+  },
+  "author": "Mitek Systems Inc",
+  "license": "ISC"
+}
