@@ -1,14 +1,17 @@
-const   merge = require('webpack-merge'),
+const {merge} = require('webpack-merge'),
     path = require('path'),
     common = require('./webpack.common');
 
 module.exports = merge(common, {
     mode: "development",
     devServer: {
-        contentBase: path.join(__dirname, "public/"),
-        port: 8080,
-        publicPath: "http://localhost:1977/dist/",
-        hotOnly: true,
-        historyApiFallback: true
+        static: {
+            directory: path.join(__dirname, "public"),
+        },
+        compress: true,
+        port: 9090,
+        historyApiFallback: true,
+        liveReload: true,
+        hot: true
     }
 });

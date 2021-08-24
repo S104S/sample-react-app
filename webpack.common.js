@@ -8,7 +8,7 @@ module.exports = {
     module:{
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: "babel-loader",
                 options: { presets: ["@babel/env"] }
@@ -28,11 +28,6 @@ module.exports = {
         filename: "bundle.js"
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-            },
-        })
+        new webpack.HotModuleReplacementPlugin()
     ]
 };
